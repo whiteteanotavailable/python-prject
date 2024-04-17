@@ -15,7 +15,8 @@ FPS = 30
 clock = pygame.time.Clock()
 
 gameIsRunning = True
-
+x=100
+y=100
 # Game loop
 while gameIsRunning:
     # Event handling
@@ -24,8 +25,10 @@ while gameIsRunning:
             gameIsRunning = False
     
 		# Clear the screen
+    x-=1
+    y-=1
     screen.fill((0, 0, 0))
-    pygame.draw.circle(screen, (255, 255, 255), (100, 100), 20)
+    pygame.draw.circle(screen, (255, 255, 255), (x, y), 20)
     # Flip the display
     pygame.display.flip()
 
